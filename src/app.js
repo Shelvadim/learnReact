@@ -6,14 +6,15 @@ console.log('app is runing');
 //live-server public
 var app ={
 title:'Hello',
-subtitle:'jsx'
-
+subtitle:'jsx',
+opt:['11', '222']
 };
 
 var template =(
 <div>
   <h1>{app.title}</h1>
-  <p>{app.subtitle}</p>
+  {app.subtitle && <p>{app.subtitle}</p>}
+  <p>{app.opt.lenght > 0 ? 'rrrrrr' : 'no'}</p>
   <ol>
     <li>Item1</li>
     <li>Item2</li>
@@ -22,20 +23,28 @@ var template =(
 );
 
 var user= {
-  name:'Dora',
-  age:'24',
-  location:'Rio'
+    name:'Dora',
+    age:'20',
+    location:'www'
 };
 
 /*var userName='Mike';
 var age=29;
 var loc='Richmond';*/
+function getLoc(location){
+  if(location){
+    return <p>Loc: {location}</p>;
+  }else{
+    return undefined;
+  }
+}
 
 var template2 =(
 <div>
-  <h1>{user.name}</h1>
-  <p>Age: {user.age}</p>
-  <p>Loc: {user.location}</p>
+  <h1>{user.name ? user.name : 'Anonymous'}</h1>
+
+  {(user.age && user.age >=18) && <p>Age: {user.age}</p>}
+  {getLoc(user.location)}
 </div>
 );
 

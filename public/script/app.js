@@ -7,8 +7,8 @@ console.log('app is runing');
 //live-server public
 var app = {
   title: 'Hello',
-  subtitle: 'jsx'
-
+  subtitle: 'jsx',
+  opt: ['11', '222']
 };
 
 var template = React.createElement(
@@ -19,10 +19,15 @@ var template = React.createElement(
     null,
     app.title
   ),
-  React.createElement(
+  app.subtitle && React.createElement(
     'p',
     null,
     app.subtitle
+  ),
+  React.createElement(
+    'p',
+    null,
+    app.opt.lenght > 0 ? 'rrrrrr' : 'no'
   ),
   React.createElement(
     'ol',
@@ -42,13 +47,25 @@ var template = React.createElement(
 
 var user = {
   name: 'Dora',
-  age: '24',
-  location: 'Rio'
+  age: '20',
+  location: 'www'
 };
 
 /*var userName='Mike';
 var age=29;
 var loc='Richmond';*/
+function getLoc(location) {
+  if (location) {
+    return React.createElement(
+      'p',
+      null,
+      'Loc: ',
+      location
+    );
+  } else {
+    return undefined;
+  }
+}
 
 var template2 = React.createElement(
   'div',
@@ -56,20 +73,15 @@ var template2 = React.createElement(
   React.createElement(
     'h1',
     null,
-    user.name
+    user.name ? user.name : 'Anonymous'
   ),
-  React.createElement(
+  user.age && user.age >= 18 && React.createElement(
     'p',
     null,
     'Age: ',
     user.age
   ),
-  React.createElement(
-    'p',
-    null,
-    'Loc: ',
-    user.location
-  )
+  getLoc(user.location)
 );
 
 var appRoot = document.getElementById('app');
