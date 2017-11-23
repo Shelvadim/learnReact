@@ -14,7 +14,7 @@ var template =(
 <div>
   <h1>{app.title}</h1>
   {app.subtitle && <p>{app.subtitle}</p>}
-  <p>{app.opt.lenght > 0 ? 'rrrrrr' : 'no'}</p>
+  <p>{app.opt.lenght>0 ? 'rrrrrr' : 'no'}</p>
   <ol>
     <li>Item1</li>
     <li>Item2</li>
