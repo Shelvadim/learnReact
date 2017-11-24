@@ -39,13 +39,29 @@ function getLoc(location){
   }
 }
 
-var template2 =(
-<div>
-  <h1>{user.name ? user.name : 'Anonymous'}</h1>
+let count=0;
+//const someId="my-id"; id={someId} className="button"
+const addOne = () => {
+  console.log('+One');
+};
 
-  {(user.age && user.age >=18) && <p>Age: {user.age}</p>}
-  {getLoc(user.location)}
+const subOne = () => {
+  console.log('-One');
+};
+
+const res = () => {
+  console.log('res');
+};
+
+
+const template2 =(
+<div>
+  <h1> Count: {count}</h1>  
+  <button onClick={addOne}>+1</button>
+  <button onClick={subOne}>-1</button>
+  <button onClick={res}>Res</button>
 </div>
+  
 );
 
 var appRoot = document.getElementById('app');
