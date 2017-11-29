@@ -1,2 +1,2 @@
 # learnReact
-https://codepen.io/shelvadim/pen/Kyeajd
+https://codepen.io/shelvadim/
