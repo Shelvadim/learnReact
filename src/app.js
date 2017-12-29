@@ -4,7 +4,7 @@ import {BrowserRouter,Route} from 'react-router-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-
+//
 const Page1=()=>(
     <div>
         Page1 component!
