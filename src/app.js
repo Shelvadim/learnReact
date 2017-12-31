@@ -37,9 +37,8 @@ const routes=(
         <Route path="/page2" component={Page2}/>
         <Route path="/page3" component={Page3}/>
         <Route path="/page4" component={Page4}/>
-    </div>    
+    </div>
     </BrowserRouter>
 );
 
 ReactDOM.render(routes, document.getElementById('app'));
-
