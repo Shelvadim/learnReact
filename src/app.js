@@ -7,7 +7,7 @@ import './styles/styles.scss';
 //tetetetetetetetetete
 const Page1=()=>(
     <div>
-        Page1 component!
+        Page1 component1111
     </div>
 );
 
